@@ -1,4 +1,4 @@
-# pypi-ShanHeUniversity
+# ShanHeUniversity
 
 ## **使用方法**
 

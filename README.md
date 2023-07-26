@@ -17,7 +17,7 @@
 #### **准备工作**
 1.Python3.*
 
-2.`pip install shanheuniversity'
+2.`pip install shanheuniversity`
 
 #### **示例代码**
 
@@ -41,7 +41,7 @@ api.apply(email='demo@shu.edu')
 #### **准备工作**
 1.Python3.*
 
-2.`pip install shanheuniversity'
+2.`pip install shanheuniversity`
 
 #### **示例代码**
 
@@ -73,7 +73,7 @@ function(
 #### **准备工作**
 1.Python3.*
 
-2.`pip install shanheuniversity'
+2.`pip install shanheuniversity`
 
 #### **示例代码**
 

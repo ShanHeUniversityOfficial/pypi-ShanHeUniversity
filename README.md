@@ -5,7 +5,9 @@
 ### **使用流程总览**
 
 1.申请密钥(apply)
+
 2.新建记录(CreateNewAPI)
+
 3.循环聊天(ChatAPI)
 
 ---

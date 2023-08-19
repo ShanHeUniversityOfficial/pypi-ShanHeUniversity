@@ -52,7 +52,7 @@ class NewData(A):
         self.state = _data['state']
         if _data['state'] == 'success':
             self.data = A(_data['data'])
-            self.data.id = _data['data']['id']
+            self.data.id = _data['data']['chat_id']
             self.data.password = _data['data']['password']
             self.data.reply = _data['data']['reply']
         else:

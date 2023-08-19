@@ -12,6 +12,8 @@
 
 ---
 
+## v1.api
+
 ### **申请密钥**
 
 #### **准备工作**
@@ -22,7 +24,8 @@
 #### **示例代码**
 
 ```python
-from ShanHeuniversity import api
+from ShanHeuniversity import v1
+api = v1.api
 
 api.apply(email='demo@shu.edu')
 
@@ -46,9 +49,10 @@ api.apply(email='demo@shu.edu')
 #### **示例代码**
 
 ```python
-from ShanHeuniversity import api
 import sys
 import os
+from ShanHeuniversity import v1
+api = v1.api
 
 function = lambda data: sys.stdout.write(str(data))
 
@@ -80,7 +84,8 @@ function(
 ```python
 import sys
 import os
-from ShanHeuniversity import api
+from ShanHeuniversity import v1
+api = v1.api
 
 function = lambda data: sys.stdout.write(
     'MobAI:' + data.data.reply + '\n\n'
@@ -142,3 +147,118 @@ while True:
     )
 
 ```
+
+---
+
+### **其他功能**
+
+#### **聊天记录**
+
+##### **准备工作**
+1.Python3.*
+
+2.`pip install shanheuniversity`
+
+##### **示例代码**
+
+```python
+import sys
+import os
+from ShanHeuniversity import v1
+api = v1.api
+
+function = lambda data: sys.stdout.write(str(data))
+
+api._api_key = os.getenv('MOBAI_API_KEY')
+function(
+    api.RecodesAPI(
+        _id='id',
+        password='password',
+    )
+)
+
+```
+
+##### **参数总览**
+
+| 参数名 | 参数类型 | 是否必填 | 默认值 | 示例 |
+| --- | --- | --- | --- | --- |
+| api_key | String | 是 | 无 | sk-demo |
+| _id | String | 是 | 无 | 0000-0000-0000-0000 |
+| password | String | 是 | 无 | password-1234 |
+
+---
+
+#### **检查AP**
+
+> A: Account 账号
+> 
+> P: Password 密码
+
+##### **准备工作**
+1.Python3.*
+
+2.`pip install shanheuniversity`
+
+##### **示例代码**
+
+```python
+import sys
+import os
+from ShanHeuniversity import v1
+api = v1.api
+
+function = lambda data: sys.stdout.write(str(data))
+
+api._api_key = os.getenv('MOBAI_API_KEY')
+function(
+    api.check(
+        _id='id',
+        password='password',
+    )
+)
+
+```
+
+##### **参数总览**
+
+| 参数名 | 参数类型 | 是否必填 | 默认值 | 示例 |
+| --- | --- | --- | --- | --- |
+| api_key | String | 是 | 无 | sk-demo |
+| _id | String | 是 | 无 | 0000-0000-0000-0000 |
+| password | String | 是 | 无 | password-1234 |
+
+---
+
+#### **检查账号存在性**
+
+##### **准备工作**
+1.Python3.*
+
+2.`pip install shanheuniversity`
+
+##### **示例代码**
+
+```python
+import sys
+import os
+from ShanHeuniversity import v1
+api = v1.api
+
+function = lambda data: sys.stdout.write(str(data))
+
+api._api_key = os.getenv('MOBAI_API_KEY')
+function(
+    api.exist(
+        _id='id',
+    )
+)
+
+```
+
+##### **参数总览**
+
+| 参数名 | 参数类型 | 是否必填 | 默认值 | 示例 |
+| --- | --- | --- | --- | --- |
+| api_key | String | 是 | 无 | sk-demo |
+| _id | String | 是 | 无 | 0000-0000-0000-0000 |
